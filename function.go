@@ -5,7 +5,10 @@ import (
 	"context"
 	"log"
 
+	"github.com/GoogleCloudPlatform/functions-framework-go/funcframework"
+
 	language "cloud.google.com/go/language/apiv1"
+
 	languagepb "google.golang.org/genproto/googleapis/cloud/language/v1"
 )
 
@@ -18,7 +21,12 @@ type PubSubMessage struct {
 // HelloPubSub consumes a Pub/Sub message.
 func HelloPubSub(ctx context.Context, m PubSubMessage) error {
 	Goog("I hate this it is so terrible to die in a fire.")
+
 	return nil
+}
+
+func ignore() {
+	funcframework.RegisterEventFunction("nothing", nil)
 }
 
 func Goog(text string) {
