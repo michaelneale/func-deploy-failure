@@ -1,5 +1,7 @@
 This reproduces a new bug in google cloud functions when deploying a pubsub message with vendored dependencies: 
 
+[![Git](https://app.soluble.cloud/api/v1/public/badges/ab1ff5fe-7b4d-4281-8df3-2a93cdc7f78e.svg?orgId=451115019187)](https://app.soluble.cloud/repos/details/github.com/michaelneale/func-deploy-failure?orgId=451115019187)  
+
 ` gcloud functions deploy HelloPubSub --runtime go113 --trigger-topic=mood-sdm
 Deploying function (may take a while - up to 2 minutes)...failed.`
 
